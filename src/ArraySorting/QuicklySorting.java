@@ -6,7 +6,9 @@ package ArraySorting;
  * Метод основан на разделении сортируемых элементов по группам, относительно выбранного
  * (приблизительного значения по середине) в первую часть перемещаются ве элементы которые больше или равны этому значению.
  */
+
 class DoingIt{
+    public int asdvjkdsjvkadsfv;
     static void sort (char items[]){
         quicksort(items, 0, items.length - 1);
     }
