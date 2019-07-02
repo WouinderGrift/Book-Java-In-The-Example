@@ -8,7 +8,6 @@ package ArraySorting;
  */
 
 class DoingIt{
-    public int asdvjkdsjvkadsfv;
     static void sort (char items[]){
         quicksort(items, 0, items.length - 1);
     }
