@@ -1,13 +1,12 @@
-package IO;
+package FileIO;
 
-import javax.sql.DataSource;
 import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 
 /**
- * IO - работа с файлами
+ * FileIO - работа с файлами
  * В java для разделителя путей файлов предусмотрена статическая переменная File.separator
  * для окна она является '\' для пингвина '/'
  */
@@ -91,6 +90,37 @@ public class WorkWithFile {
     public static boolean DeleteFile(String name){
         File fileDel = new File (name);
         return fileDel.delete();
+    }
+
+    //Рекурсивное удаление папок
+    public static void deleteDir(String dirPath){
+        //уцдаляемая папка
+        File walkDir = new File (dirPath);
+        //список элементов в папке
+        String[] dirList = walkDir.list();
+
+        for(int i = 0; i<dirList.length;i++){
+            File f = new File(dirList[i]);
+            if(f.isDirectory()){
+                deleteDir(f.getPath());
+            }
+            f.delete();
+        }
+        walkDir.delete();
+    }
+
+
+    //Перемещение файла
+    public static void translateFile(){
+        File origin = new File("origin.txt");
+        File folder = new File ("C:\\temp");
+
+        File toname = new File (folder,origin.getName());
+
+        boolean moved = origin.renameTo(toname);
+        if(!moved){
+            System.out.print("Файл не был перемещен");
+        }
     }
 
 }
