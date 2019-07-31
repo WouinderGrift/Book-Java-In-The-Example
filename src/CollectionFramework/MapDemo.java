@@ -1,4 +1,4 @@
-package Collection;
+package CollectionFramework;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -24,7 +24,7 @@ import java.util.Map;
  * Встроенные классы реализующие функции в интерфейсах:
  * ArrayList - список как массив элементов
  * LinkedList -список, выполняющий функции связанного списка
- * HashSet - множество Set как хеш-таблица
+ * HashSetDemo - множество Set как хеш-таблица
  * TreeSet - множество SortedSet как дерево
  * HashMap - индексированный словарь хеш
  * TreeMap - коллекция SortedMap как дерево
@@ -32,7 +32,7 @@ import java.util.Map;
  * Они обеспечивают простоту и удобство работы с большим количеством однотипных данных
  */
 
-public class ExampleAddingDataSimpleTypeOnTheCollection {
+public class MapDemo {
     /**
      * В коллекцию можно сохранять только объекты, но не простые типы данных как int double
      * Но их можно добавить, если использовать класс оболочку (int - Integer, double - Double)
