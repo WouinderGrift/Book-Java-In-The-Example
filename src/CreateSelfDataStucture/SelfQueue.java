@@ -1,22 +1,22 @@
-package AnotherViewArray;
+package CreateSelfDataStucture;
 
 /**
  * Очередь - массив с принципом работ: первый вошел - первый вышел
  */
-public class Queue {
+public class SelfQueue {
     private Object que[];
     private int putIndex;   //входной индекс
     private int getIndex;   //выходной индекс
 
     //Создание пустой очереди
-    Queue(int size){
+    SelfQueue(int size){
         //резервирование памяти
         que = new Object[size + 1];
         getIndex = putIndex = 0;
     }
 
     //Создание очереди из другой очереди
-    Queue(Queue NewQue){
+    SelfQueue(SelfQueue NewQue){
         putIndex = NewQue.putIndex;
         getIndex = NewQue.getIndex;
         que = new Object[NewQue.que.length];
@@ -26,7 +26,7 @@ public class Queue {
     }
 
     //Создание очереди из массива
-    Queue(Object arrQue[]){
+    SelfQueue(Object arrQue[]){
         putIndex = 0;
         getIndex = 0;
         que = new Object[arrQue.length + 1];

@@ -1,18 +1,16 @@
-package AnotherViewArray;
-
-import com.sun.org.apache.xerces.internal.util.SynchronizedSymbolTable;
+package CreateSelfDataStucture;
 
 /**
  * Массив работающий по принципу: последний зашел - первый вышел
  * Пример стека для любого типа объектов
  */
-public class Stack {
+public class SelfStack {
     private Object[] theArray;
     private int topOfStack;
     static final int DEFAULT_CAPACITY = 10;
 
     //Установка объема стека по умолчанию
-    public Stack(){
+    public SelfStack(){
         theArray = new Object[DEFAULT_CAPACITY];
         topOfStack = -1;
     }
@@ -47,7 +45,7 @@ public class Stack {
     }
 
     //Добавляет новый элемент в стек, где @param х - добавляемый элемент
-    void push(Object x){
+    public void push(Object x){
         //Если стек переполнен, то автоматически удвоить размер
         if(topOfStack + 1 == theArray.length){
             doubleArray();      //метод объявлени ниже
